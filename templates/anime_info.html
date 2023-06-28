@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .poster {
+            width: 30%;
+            margin-right: 20px;
+        }
+
+        .poster img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .info {
+            width: 70%;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .synopsis {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .thumbnail {
+            display: block;
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .anime-info {
+            margin-top: 20px;
+        }
+
+        .anime-info p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="poster">
+            <img src="{{ poster }}" alt="Poster">
+        </div>
+        <div class="info">
+            <h1 class="title">{{ title }}</h1>
+            <p class="synopsis">{{ synopsis }}</p>
+            <div class="anime-info">
+                <p><strong>English Name:</strong> {{ english_name }}</p>
+                <p><strong>Japanese Name:</strong> {{ japanese_name }}</p>
+                <p><strong>Studio:</strong> {{ studio }}</p>
+                <p><strong>Genre:</strong> {{ genre }}</p>
+                <p><strong>Episodes:</strong> {{ episodes }}</p>
+                <p><strong>Episode Duration:</strong> {{ episode_duration }}</p>
+                <p><strong>Start Date:</strong> {{ start_date }}</p>
+                <p><strong>End Date:</strong> {{ end_date }}</p>
+                <p><strong>Score:</strong> {{ score }}</p>
+            </div>
+        </div>
+    </div>
+    <img class="thumbnail" src="{{ thumbnail }}" alt="Thumbnail">
+</body>
+</html>
