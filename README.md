@@ -29,3 +29,15 @@ The Anime API is a RESTful web service built with Flask and Python. It allows us
 ## Example
 To retrieve information about an anime with ID 123:
 
+
+## Documentation
+The API documentation provides detailed information about the endpoints and their usage. It can be accessed by visiting the root URL [http://localhost:5000](http://localhost:5000) when the server is running.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+For any inquiries or suggestions, please contact [Soheru](https://github.com/soheru).
+
+
+
