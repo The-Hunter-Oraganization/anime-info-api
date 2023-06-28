@@ -10,7 +10,7 @@ The Anime Info API is a Flask-based web application that retrieves detailed info
 - Error handling for failed API requests
 
 **Usage:**
-1. Clone the repository: `git clone https://github.com/soheru/anime-info-api.git`
+1. Clone the repository: `git clone https://github.com/The-Hunter-Oraganization/anime-info-api.git`
 2. Install the required dependencies: `pip install -r requirements.txt`
 3. Run the Flask application: `python app.py`
 4. Access the API endpoints:
