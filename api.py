@@ -3,7 +3,6 @@ from flask import Flask, render_template, redirect
 import requests
 
 app = Flask(__name__)
-base_url = "https://soheru-musical-space-eureka-76rwqg9wggj3xxw-5000.preview.app.github.dev/anime/info/"
 
 @app.route('/anime/info/<int:anime_id>')
 def get_anime_info(anime_id):
@@ -131,7 +130,7 @@ def get_anime_info_json(anime_id):
 
 @app.route('/')
 def redirect_to_telegram():
-    return redirect('https://t.me/aboutmesk')
+    return render_template('documentation.html')
 
 if __name__ == '__main__':
     app.run()
