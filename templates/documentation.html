@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime Info API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        code {
+            background-color: #f2f2f2;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .example-container {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .response-code {
+            margin-top: 10px;
+            color: #888;
+            font-size: 14px;
+        }
+
+        .example-request,
+        .example-response {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            background-color: #fff;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .example-response {
+            background-color: #f2f2f2;
+        }
+
+        .example-heading {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #555;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var containers = document.getElementsByClassName('example-container');
+            for (var i = 0; i < containers.length; i++) {
+                var container = containers[i];
+                container.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Anime Info API Documentation</h1>
+
+        <h2>Endpoint: /json/info</h2>
+
+        <h3>GET /json/info</h3>
+        <p>Returns information about a specific anime show in JSON format.</p>
+        <p><strong>Parameters:</strong></p>
+        <ul>
+            <li><code>anime_id</code> (integer) - The ID of the anime show to retrieve information for.</li>
+        </ul>
+        <p><strong>Response:</strong></p>
+        <ul>
+            <li><code>200 OK</code> - Returns the anime information in JSON format.</li>
+            <li><code>404 Not Found</code> - If the anime with the specified ID is not found.</li>
+            <li><code>500 Internal Server Error</code> - If there is an error retrieving the anime information.</li>
+        </ul>
+
+        <div class="example-container">
+            <h2 class="example-heading">Example</h2>
+
+            <div class="example-request">
+                <h3 class="example-heading">Retrieve Anime Information</h3>
+                <p>Example Request:</p>
+                <code>GET /json/info?anime_id=123</code>
+            </div>
+
+            <div class="example-response">
+                <h3 class="example-heading">Example Response:</h3>
+                <pre>
+{
+    "title": "Attack on Titan",
+    "synopsis": "Several hundred years ago, humans were nearly exterminated by Titans...",
+    "poster": "https://example.com/poster.jpg",
+    "thumbnail": "https://example.com/thumbnail.jpg",
+    "english_name": "Attack on Titan",
+    "japanese_name": "進撃の巨人",
+    "studio": "Wit Studio",
+    "genre": "Action, Drama, Fantasy",
+    "episodes": 25,
+    "episode_duration": 24,
+    "start_date": "2013-04-07",
+    "end_date": "2013-09-29",
+    "score": 90
+}
+                </pre>
+            </div>
+        </div>
+
+        <h2>Usage</h2>
+        <p>To use the Anime Info API, make a GET request to the <code>/json/info</code> endpoint with the <code>anime_id</code> parameter to retrieve information about a specific anime show.</p>
+
+        <h2>Notes</h2>
+        <p>- The anime information is retrieved from AniList API.</p>
+        <p>- The IDs of the anime shows can be obtained from AniList or any other anime database.</p>
+    </div>
+    <footer>
+        <p>Powered by <a href="https://github.com/soheru">Soheru</a> | <a href="https://t.me/aboutmesk">Telegram</a></p>
+    </footer>
+</body>
+</html>
