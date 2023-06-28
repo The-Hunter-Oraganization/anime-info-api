@@ -1,25 +1,31 @@
-**Repository Name:** anime-info-api
+# Anime API
 
-**Description:**
-The Anime Info API is a Flask-based web application that retrieves detailed information about anime from AniList using GraphQL. It provides endpoints to fetch anime information, including titles, descriptions, cover images, studio names, genres, episode details, start and end dates, and average scores. Additionally, it offers a JSON endpoint to directly access the anime data in JSON format. The API is designed to be easy to use and can be integrated into various applications or services that require anime-related data.
+## Introduction
+The Anime API is a RESTful web service built with Flask and Python. It allows users to retrieve information about anime using the AniList GraphQL API. The API provides endpoints to fetch anime details, such as title, synopsis, poster, genres, episodes, duration, start date, end date, and average score.
 
-**Features:**
-- Fetch detailed information about anime by ID
-- Retrieve anime titles, descriptions, cover images, studio names, genres, episode details, start and end dates, and average scores
-- JSON endpoint to directly access anime data in JSON format
-- Error handling for failed API requests
+## Features
+- Retrieve anime information by ID
+- Fetch anime details including title, synopsis, poster, genres, episodes, duration, start date, end date, and average score
 
-**Usage:**
-1. Clone the repository: `git clone https://github.com/The-Hunter-Oraganization/anime-info-api.git`
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Run the Flask application: `python app.py`
-4. Access the API endpoints:
-   - `/anime/info/<anime_id>`: Retrieve detailed information about a specific anime by ID.
-   - `/json/info/<anime_id>`: Get the anime information in JSON format.
-5. Integrate the API into your applications or services to fetch anime data programmatically.
+## Requirements
+- Python 3.7 or above
+- Flask
+- Requests
 
-**Contributing:**
-Contributions to the Anime Info API are welcome! If you find any issues or have suggestions for improvements, please submit a pull request. Make sure to follow the contribution guidelines specified in the repository.
+## Installation
+1. Clone the repository: `git clone https://github.com/soheru/anime-api.git`
+2. Navigate to the project directory: `cd anime-api`
+3. Install the dependencies: `pip install -r requirements.txt`
 
-**License:**
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+## Usage
+1. Start the Flask server: `python app.py`
+2. Access the API documentation at: [http://localhost:5000](http://localhost:5000)
+3. Use the following endpoint to retrieve anime information:
+
+   `GET /anime/info/{anime_id}`
+
+   Replace `{anime_id}` with the ID of the anime you want to fetch.
+
+## Example
+To retrieve information about an anime with ID 123:
+
